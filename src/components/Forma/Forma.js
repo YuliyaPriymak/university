@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import './Forma.scss'
 
 class Forma extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const {onInputChange, onReset, country, onSearchUniversity} = this.props;

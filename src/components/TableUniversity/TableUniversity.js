@@ -4,7 +4,7 @@ const TableUniversity = (props) => {
     const {university, country} = props;
     return (
         <div>
-            <h2 className='text-center text-uppercase'>universities of {country}</h2>
+            <h2 className='text-center text-uppercase'>universities of {country} ({university.length})</h2>
                 <table className='table table-bordered'>
                     <thead>
                     <tr>

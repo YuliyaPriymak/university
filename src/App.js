@@ -33,19 +33,20 @@ class App extends Component {
     }
 
     render() {
+        const {isLoad, country, university} = this.state;
         return (
             <div className='wrapper'>
                 <Forma
-                    country={this.state.country}
+                    country={country}
                     onInputChange={this.onInputChange}
                     onSearchUniversity={this.onSearchUniversity}
                     onReset={this.onReset}
                 />
                 {
-                    !this.state.university.length && this.state.isLoad && <div>Loading...</div>
+                    !university.length && isLoad && <h2 className='text-center'>Loading...</h2>
                 }
                 {
-                    this.state.university.length > 0 && <TableUniversity country={this.state.country} university={this.state.university}/>
+                    university.length > 0 && <TableUniversity country={country} university={university}/>
                 }
             </div>
         );
